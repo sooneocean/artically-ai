@@ -1,0 +1,18 @@
+{
+  "brand_name": "Example Brand",
+  "industry": "fashion",
+  "urls": ["https://example.com"],
+  "social_urls": ["https://instagram.com/example"],
+  "ads_urls": [],
+  "llm": {
+    "provider": "openai",
+    "model": "gpt-4o-mini",
+    "api_key": "YOUR_API_KEY"
+  },
+  "comfyui": {
+    "enabled": false,
+    "base_url": "http://YOUR_COMFYUI_HOST:8188",
+    "workflow": "./config/comfyui-workflow.json"
+  },
+  "output_dir": "./output"
+}

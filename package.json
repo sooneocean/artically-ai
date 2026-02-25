@@ -1,0 +1,10 @@
+{
+  "name": "competitor-debrief-spec",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "scripts": {
+    "onboard": "node ./cli/onboard.js",
+    "start": "node ./cli/index.js ./config/config.json",
+    "test": "bash ./tests/run_basic_test.sh"
+  }
+}
