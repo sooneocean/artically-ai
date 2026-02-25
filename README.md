@@ -29,22 +29,51 @@
 
 ---
 
-## 使用方式（MVP）
+## 安裝
 ```bash
-# 先做一次 Onboard
+# 1) 下載
+
+git clone https://github.com/sooneocean/artically-ai
+cd artically-ai
+
+# 2) 確認 Node 與 Python
+node -v
+python3 --version
+```
+
+## 快速開始
+```bash
+# 先做一次 Onboard（產生 config/config.json）
 node ./cli/onboard.js
 
 # 之後執行
 node ./cli/index.js ./config/config.json
 ```
 
+## 輸出
+- `output/report.md`
+- `output/report.pdf`（若系統有 `npx` 可用）
+
 ## ComfyUI（可選）
-- 在 `config/config.example.json` 啟用 `comfyui.enabled=true`
-- 填入 `base_url` 與 workflow JSON
+在 `config/config.json` 內設定：
+```json
+"comfyui": {
+  "enabled": true,
+  "base_url": "http://YOUR_COMFYUI_HOST:8188",
+  "workflow": "./config/comfyui-workflow.json"
+}
+```
 
 ## 基本測試
 ```bash
 bash ./tests/run_basic_test.sh
 ```
+
+## FAQ
+- **PDF 產出失敗？**
+  - 請確認 `npx` 可用（Node 安裝完整）
+
+- **網站抓不到資料？**
+  - 該網站可能高度依賴 JS，可改用 headless（後續可擴充）
 
 下一步：請見 `spec.md` 了解完整規格。
